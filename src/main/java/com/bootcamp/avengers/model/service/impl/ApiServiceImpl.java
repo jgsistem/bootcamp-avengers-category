@@ -33,6 +33,6 @@ public class ApiServiceImpl implements IApiService {
 
     @Override
     public Observable<List<Category>> getAllCategoriesByDiscount(Long idDiscount) {
-        return Observable.fromArray(categoryRepository.findAll());
+        return Observable.fromArray(categoryRepository.findAllByDiscount(idDiscount));
     }
 }
