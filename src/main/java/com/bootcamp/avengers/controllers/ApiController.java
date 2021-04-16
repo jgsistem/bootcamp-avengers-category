@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/category/v1")
 public class ApiController {
     @Autowired
     private IApiService apiService;
