@@ -33,8 +33,8 @@ public class ApiController {
                 .subscribeOn(Schedulers.io());
     }
 
-    @GetMapping("/allByDiscount")
-    public Observable<List<Category>> getAllCategoriesByDiscount(Long idDiscount) {
+    @GetMapping("/allByDiscount/{idDiscount}")
+    public Observable<List<Category>> getAllCategoriesByDiscount(@PathVariable Long idDiscount) {
         return apiService.getAllCategoriesByDiscount(idDiscount)
                 .subscribeOn(Schedulers.io());
     }
